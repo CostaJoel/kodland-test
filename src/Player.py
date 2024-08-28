@@ -3,17 +3,23 @@ from src.settings import player_size, bullet_size, bullets, bullet_speed, WIDTH,
 
 
 class Player:
-    def __init__(self, size = (50,30), speed=5, color=GREEN) -> None:
+    
+
+    def __init__(self, size = (50,50), speed=10, color=GREEN) -> None:
         self.size = size
         self.speed = speed
         self.pos = [WIDTH // 2, HEIGHT - 2 * player_size[1]]
         self.color = color
         self.bullets = []
+        self.player_image = pygame.image.load('assets/player.png')
+        self.player_image = pygame.transform.scale(self.player_image, (50, 50))
         pass
+
+    
 
 
     def draw_player(self, screen):
-        pygame.draw.rect(screen, self.color, pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1]))
+        screen.blit(self.player_image, (self.pos[0], self.pos[1]))
 
 
     def move_left(self):

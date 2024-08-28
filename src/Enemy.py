@@ -4,12 +4,15 @@ import random
 
 class Enemy:
     
-    def __init__(self, size = (50,30), speed=5, color=RED):
+    def __init__(self, size = (40,40), speed=5, color=RED):
         # Enemy settings
         self.size = size
         self.speed = speed
         self.pos = [random.randint(0, WIDTH - size[0]), 0]
         self.color = color
+        self.enemy_image = pygame.image.load('assets/enemy.png')
+        self.enemy_image = pygame.transform.scale(self.enemy_image, (40, 40))
+        pass
 
 
     def move(self):
@@ -19,4 +22,4 @@ class Enemy:
 
 
     def draw_enemy(self, screen):
-        pygame.draw.rect(screen, self.color, pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1]))
+        screen.blit(self.enemy_image, (self.pos[0], self.pos[1]))
