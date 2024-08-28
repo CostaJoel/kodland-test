@@ -28,3 +28,23 @@ Space Invader Shooter is a simple 2D shooter game built using the PyGame library
 
    ```bash
    pip install -r requirements
+
+## Running the Game
+
+1. Navigate to the project directory.
+```bash
+   cd path/to/your/project
+```
+2. Run the game script:
+```bash
+   python main.py
+```
+
+## Controls
+- Left Arrow Key: Move spaceship left.
+- Right Arrow Key: Move spaceship right.
+- Spacebar: Shoot bullets.
+
+
+## Contact
+For any questions or issues, please contact Joel Costa at joeldavidcostajr@gmail.com.
